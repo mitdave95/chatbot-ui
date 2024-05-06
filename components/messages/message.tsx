@@ -129,7 +129,7 @@ export const Message: FC<MessageProps> = ({
   const MODEL_DATA = [
     ...models.map(model => ({
       modelId: model.model_id as LLMID,
-      modelName: model.name,
+      modelName: "Professor",
       provider: "custom" as ModelProvider,
       hostedId: model.id,
       platformLink: "",
@@ -228,7 +228,7 @@ export const Message: FC<MessageProps> = ({
                   />
                 ) : (
                   <WithTooltip
-                    display={<div>{MODEL_DATA?.modelName}</div>}
+                    display={<div>{"Professor"}</div>}
                     trigger={
                       <ModelIcon
                         provider={modelDetails?.provider || "custom"}
@@ -261,7 +261,7 @@ export const Message: FC<MessageProps> = ({
                       )?.name
                     : selectedAssistant
                       ? selectedAssistant?.name
-                      : MODEL_DATA?.modelName
+                      : "Professor"
                   : profile?.display_name ?? profile?.username}
               </div>
             </div>
