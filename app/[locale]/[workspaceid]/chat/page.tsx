@@ -36,7 +36,7 @@ export default function ChatPage() {
             <QuickSettings />
           </div>
 
-          <div className="absolute right-2 top-2">
+          <div className="absolute right-2 top-2 hidden">
             <ChatSettings />
           </div>
 
